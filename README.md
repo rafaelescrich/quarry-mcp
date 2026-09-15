@@ -52,12 +52,11 @@ The web workspace adds a browser UI over the same Quarry schema. It has no addit
 python3 -m quarry_mcp.web --db fixtures/quarry-fixture.sqlite --state ./quarry-workspace.sqlite --port 8791
 ```
 
-Open `http://127.0.0.1:8791`. On Solimoes the production corpus is at
-`/home/rafael/Projects/lean/quarry-out/quarry.sqlite`; the installed web app is
-`/home/rafael/Projects/lean/quarry-web`. Connect with:
+Open `http://127.0.0.1:8791`. To browse a remote registry, run the web app on
+that machine and forward its loopback port over SSH:
 
 ```bash
-ssh -N -L 8791:127.0.0.1:8791 solimoes
+ssh -N -L 8791:127.0.0.1:8791 user@remote-host
 ```
 
 - Search real declarations by name or statement; filter by source package and declaration kind, with pagination.
