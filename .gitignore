@@ -1,0 +1,24 @@
+# Local registry state and large generated corpora
+quarry-workspace.sqlite
+*.sqlite-wal
+*.sqlite-shm
+quarry-out/
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+
+# Local agent runs and logs can contain prompts, paths, and operational metadata.
+logs/
+*.log
+
+# Local credentials and machine-specific configuration
+.env
+.env.*
+!.env.example
+*secret*
+*credentials*
+*.pem
+*.key
+

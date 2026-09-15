@@ -1,0 +1,15 @@
+[Unit]
+Description=Quarry Lean proof management workspace
+After=network.target
+
+[Service]
+Type=simple
+WorkingDirectory=/home/rafael/Projects/lean/quarry-web
+ExecStart=/usr/bin/python3 -m quarry_mcp.web --db /home/rafael/Projects/lean/quarry-out/quarry.sqlite --state /home/rafael/Projects/lean/quarry-web/data/workspace.sqlite --port 8791 --allowed-host solimoes.tailaf8cc.ts.net
+Restart=on-failure
+RestartSec=5
+UMask=0077
+NoNewPrivileges=true
+
+[Install]
+WantedBy=default.target
